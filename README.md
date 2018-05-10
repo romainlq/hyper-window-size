@@ -2,6 +2,8 @@
 
 Hyper-window-size is a simple plugin for [Hyper.app](https://hyper.is/) that lets you set the size of the window
 
+![hyper-window-size](https://user-images.githubusercontent.com/13620579/39882075-1959f24c-5483-11e8-8722-851a2d4fb6d4.gif)
+
 ## Install
 
 ### Using hyper
