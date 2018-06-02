@@ -4,7 +4,7 @@
 [![NPM version](https://badge.fury.io/js/hyper-window-size.svg)](https://www.npmjs.com/package/hyper-window-size)
 ![Downloads](https://img.shields.io/npm/dm/hyper-window-size.svg?style=flat)
 
-Hyper-window-size is a simple plugin for [Hyper.app](https://hyper.is/) that lets you set the size of the window
+Hyper-window-size is a simple plugin for [Hyper.app](https://hyper.is/) that lets you set the size and position of the window
 
 ![hyper-window-size](https://user-images.githubusercontent.com/13620579/39882075-1959f24c-5483-11e8-8722-851a2d4fb6d4.gif)
 
@@ -34,8 +34,10 @@ module.exports = {
   config: {
     ...
     hyperWindowSize: {
-      width: 500,
-      height: 200
+      width: 540,
+      height: 380,
+      startX: 50,
+      startY: 50
     },
     ...
   }
