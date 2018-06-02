@@ -1,7 +1,7 @@
 {
   "name": "hyper-window-size",
   "version": "0.3.0",
-  "description": "Set window size using config",
+  "description": "Set window size and position using config",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
