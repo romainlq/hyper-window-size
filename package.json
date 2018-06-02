@@ -1,6 +1,6 @@
 {
   "name": "hyper-window-size",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Set window size and position using config",
   "main": "index.js",
   "scripts": {
