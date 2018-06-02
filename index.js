@@ -21,24 +21,25 @@ const trySetSize = () => {
 };
 
 module.exports.decorateConfig = config => {
-
-  if(config[CONFIG_KEY].width && config[CONFIG_KEY].height) {
+  if (config[CONFIG_KEY].width && config[CONFIG_KEY].height) {
     width = config[CONFIG_KEY].width || DEFAULT_WIDTH;
     height = config[CONFIG_KEY].height || DEFAULT_HEIGHT;
   } else {
-    console.log('hyper-window-size: \'config.hyperWindowSize\' does not contain both width and height properties');
+    width = DEFAULT_WIDTH;
+    height = DEFAULT_HEIGHT;
+    console.warn("hyper-window-size: `'config.hyperWindowSize'` does not contain both width and height properties");
   }
 
-  if(config[CONFIG_KEY].startX && config[CONFIG_KEY].startY) {
+  if (config[CONFIG_KEY].startX && config[CONFIG_KEY].startY) {
     startX = config[CONFIG_KEY].startX || DEFAULT_POS_X;
     startY = config[CONFIG_KEY].startY || DEFAULT_POS_Y;
   } else {
-    console.log('hyper-window-size: \'config.hyperWindowSize\' does not contain both startX and startY properties');
+    console.warn("hyper-window-size: `'config.hyperWindowSize'` does not contain both startX and startY properties");
+    startX = DEFAULT_POS_X;
+    startY = DEFAULT_POS_Y;
   }
   trySetSize();
-
   return config;
-
 };
 
 module.exports.onWindow = browserWindow => {
