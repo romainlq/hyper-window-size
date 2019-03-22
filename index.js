@@ -12,11 +12,13 @@ let startY = null;
 let browserWindowSingleton = null;
 
 const trySetSize = () => {
-  if (width && height && browserWindowSingleton && !browserWindowSingleton.isDestroyed()) {
-    browserWindowSingleton.setSize(width, height);
-  }
-  if (startX && startY && browserWindowSingleton && !browserWindowSingleton.isDestroyed()) {
-    browserWindowSingleton.setPosition(startX, startY);
+  if (browserWindowSingleton && !browserWindowSingleton.isDestroyed()) {
+    if(typeof height === "number" && typeof width === "number"){
+      browserWindowSingleton.setSize(width, height);
+    }
+    if(typeof startX === "number" && typeof startY === "number"){
+      browserWindowSingleton.setPosition(startX, startY);
+    }
   }
 };
 
