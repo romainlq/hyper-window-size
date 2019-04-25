@@ -13,10 +13,10 @@ let browserWindowSingleton = null;
 
 const trySetSize = () => {
   if (browserWindowSingleton && !browserWindowSingleton.isDestroyed()) {
-    if(typeof height === "number" && typeof width === "number"){
+    if (typeof height === "number" && typeof width === "number") {
       browserWindowSingleton.setSize(width, height);
     }
-    if(typeof startX === "number" && typeof startY === "number"){
+    if (typeof startX === "number" && typeof startY === "number") {
       browserWindowSingleton.setPosition(startX, startY);
     }
   }
