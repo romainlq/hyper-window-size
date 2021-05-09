@@ -1,3 +1,5 @@
+const {convertWidth, convertHeight} = require("./columnRow.js");
+
 const CONFIG_KEY = "hyperWindowSize";
 const DEFAULT_WIDTH = 540;
 const DEFAULT_HEIGHT = 380;
@@ -23,7 +25,10 @@ const trySetSize = () => {
 };
 
 module.exports.decorateConfig = config => {
-  if (config[CONFIG_KEY].width || config[CONFIG_KEY].height) {
+  if (config[CONFIG_KEY].transform === true) {
+    width = convertWidth(config[CONFIG_KEY].width) || DEFAULT_WIDTH;
+    height = convertHeight(config[CONFIG_KEY].height) || DEFAULT_HEIGHT;
+  } else if (config[CONFIG_KEY].width || config[CONFIG_KEY].height) {
     width = config[CONFIG_KEY].width || DEFAULT_WIDTH;
     height = config[CONFIG_KEY].height || DEFAULT_HEIGHT;
   }
@@ -32,6 +37,7 @@ module.exports.decorateConfig = config => {
     startX = config[CONFIG_KEY].startX || DEFAULT_POS_X;
     startY = config[CONFIG_KEY].startY || DEFAULT_POS_Y;
   }
+
   trySetSize();
   return config;
 };
