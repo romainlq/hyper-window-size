@@ -26,8 +26,8 @@ const trySetSize = () => {
 
 module.exports.decorateConfig = config => {
   if (config[CONFIG_KEY].transform === true) {
-    width = convertWidth(config[CONFIG_KEY].width) || DEFAULT_WIDTH;
-    height = convertHeight(config[CONFIG_KEY].height) || DEFAULT_HEIGHT;
+    width = convertWidth(config[CONFIG_KEY].width);
+    height = convertHeight(config[CONFIG_KEY].height);
   } else if (config[CONFIG_KEY].width || config[CONFIG_KEY].height) {
     width = config[CONFIG_KEY].width || DEFAULT_WIDTH;
     height = config[CONFIG_KEY].height || DEFAULT_HEIGHT;
