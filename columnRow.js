@@ -17,7 +17,7 @@ const HEIGHT_SETTINGS = {
 const getLastNumber = num => +num.toString().slice(+num.toString().length - 1);
 
 const convertWidth = value => {
-  const isExtraValue = getLastNumber(value) === 4 ? WIDTH_SETTINGS.extraSizeValue : 0;
+  const isExtraValue = getLastNumber(value) === WIDTH_SETTINGS.extraUnitLocation[0] ? WIDTH_SETTINGS.extraSizeValue : 0;
 
   if (value >= WIDTH_SETTINGS.minSizeValueCol) {
     let pixelUnit = WIDTH_SETTINGS.minSizeValuePixel + isExtraValue;
