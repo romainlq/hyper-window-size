@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.4"></a>
+## [0.3.4](https://github.com/romainwn/hyper-window-size/compare/v0.3.2...v0.3.4) (2021-06-11)
+
+- Add `transform` toggle to switch pixels to columns / rows in config
+
+
 <a name="0.3.3"></a>
 ## [0.3.3](https://github.com/romainwn/hyper-window-size/compare/v0.3.2...v0.3.3) (2020-03-24)
 

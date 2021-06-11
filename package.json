@@ -1,13 +1,13 @@
 {
   "name": "hyper-window-size",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Set window size and position using config",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
     "test": "yarn run lint",
     "precommit": "yarn run test",
-    "release": "yarn run test && standard-version"
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
